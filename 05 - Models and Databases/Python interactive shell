@@ -1,0 +1,7 @@
+from market import db
+db.create_all()
+from market import Item      #Item is model        
+item1=Item(name="ABC",price=10000000,barcode="2563652",description="desc")     #create instance of model Item
+db.session.add(item1)
+db.session.commit()   #saving instance to db
+Item.query.all()      # queries all instances in the db
