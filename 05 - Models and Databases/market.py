@@ -1,7 +1,7 @@
 from flask import Flask, render_template
-from flask_sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy                         #flask_SQLAlchemy is the extension of SQLAlchemy to work with SQL databases 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///market.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///market.db'   # app_name.congif[] : to add configuration settings to the app . SQLALCHEMY_DATABASE_URI is the configuration key
 db = SQLAlchemy(app)
 
 class Item(db.Model):
