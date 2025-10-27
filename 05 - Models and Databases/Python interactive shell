@@ -5,3 +5,6 @@ item1=Item(name="ABC",price=10000000,barcode="2563652",description="desc")     #
 db.session.add(item1)
 db.session.commit()   #saving instance to db
 Item.query.all()      # queries all instances in the db
+
+for item in Item.query.filter_by(price=500):   # to filter db model
+    item.name
