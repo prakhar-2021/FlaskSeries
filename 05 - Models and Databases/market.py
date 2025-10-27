@@ -22,5 +22,5 @@ def home_page():
 
 @app.route('/market')
 def market_page():
-    items = Item.query.all()
+    items = Item.query.all()     # returns list of all objects of model Item
     return render_template('market.html', items=items)
