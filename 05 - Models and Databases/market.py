@@ -4,7 +4,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///market.db'   # app_name.congif[] : to add configuration settings to the app . SQLALCHEMY_DATABASE_URI is the configuration key
 db = SQLAlchemy(app)
 
-class Item(db.Model):
+class Item(db.Model):     # Item is model stored in db
     id = db.Column(db.Integer(), primary_key=True)
     name = db.Column(db.String(length=30), nullable=False, unique=True)
     price = db.Column(db.Integer(), nullable=False)
